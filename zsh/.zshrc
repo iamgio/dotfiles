@@ -133,8 +133,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 alias 256colors="curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/e50a28ec54188d2413518788de6c6367ffcea4f7/print256colours.sh | bash"
 
-# source /Users/gio/zsh_customization/flutter-completion.sh
-
 # Git utils
 git_release_tag() {
   local RELEASE_VERSION="$1"
