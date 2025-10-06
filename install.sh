@@ -62,21 +62,21 @@ if [[ ! -f "README.md" ]] || [[ ! -d "git" ]]; then
     exit 1
 fi
 
-# Install Xcode Command Line Tools if not present
-if ! command -v git >/dev/null 2>&1; then
+# Install Xcode Command Line Tools if not present.
+if ! command -v xcode-select >/dev/null 2>&1 && [[ "$IS_MACOS" == true ]]; then
     print_step "Installing Xcode Command Line Tools..."
     print_warning "This may take a few minutes and will open a dialog box."
     xcode-select --install
     
     # Wait for installation to complete
     print_step "Waiting for Xcode Command Line Tools installation to complete..."
-    until command -v git >/dev/null 2>&1; do
+    until command -v xcode-select >/dev/null 2>&1; do
         print_step "Still installing... Please complete the installation dialog and wait."
         sleep 5
     done
     print_success "Xcode Command Line Tools installed"
 else
-    print_success "Git already installed"
+    print_success "Xcode Command Line Tools already installed"
 fi
 
 # Install Homebrew if not present
