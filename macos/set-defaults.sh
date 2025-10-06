@@ -624,7 +624,24 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # Don't display the annoying prompt when quitting iTerm
-#defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+# Disable iTerm2's native full screen to use macOS native full screen
+defaults write com.googlecode.iterm2 UseLionStyleFullscreen -bool false
+
+# Set iTerm2 to load preferences from custom folder
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$HOME/dotfiles/iterm2"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+# Set iTerm2 as default terminal (requires macOS 10.15+)
+if [[ $(sw_vers -productVersion | cut -d. -f1) -ge 10 ]] && [[ $(sw_vers -productVersion | cut -d. -f2) -ge 15 ]]; then
+    defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
+        '{LSHandlerContentType="public.unix-executable";LSHandlerRoleAll="com.googlecode.iterm2";}'
+    defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
+        '{LSHandlerContentType="public.shell-script";LSHandlerRoleAll="com.googlecode.iterm2";}'
+    defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
+        '{LSHandlerContentType="com.apple.terminal.shell-script";LSHandlerRoleAll="com.googlecode.iterm2";}'
+fi
 
 ###############################################################################
 # Time Machine                                                               #
