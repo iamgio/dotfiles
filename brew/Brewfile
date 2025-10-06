@@ -69,10 +69,11 @@ cask "notion"
 # Virtualization
 cask "docker"
 
-mas "WhatsApp", id: 310633997
+mas "WhatsApp Messenger", id: 310633997
 mas "Telegram", id: 747648890
 mas "Microsoft To Do", id: 1274495053
 mas "CotEditor", id: 1024640650
+mas "CopyLess 2 - Clipboard Manager", id: 993841014
 mas "AdBlock Pro for Safari", id: 1018301773
 # mas "Xcode", id: 497799835
 # mas "TestFlight", id: 899247664
