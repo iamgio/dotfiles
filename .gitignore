@@ -1,0 +1,45 @@
+# Dotfiles repository gitignore
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.#*
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+
+# System files
+Thumbs.db
+Desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Log files
+*.log
+
+# Personal/sensitive files (customize as needed)
+# Uncomment these if you have sensitive data
+# **/secrets
+# **/private
+# **/*.key
+# **/*.pem
+
+# Stow ignore file
+.stow-local-ignore

@@ -1,0 +1,23 @@
+[user]
+    name = Giorgio Garofalo
+    email = giogar2705@gmail.com
+
+[core]
+    editor = code --wait
+    autocrlf = input
+    safecrlf = true
+
+[init]
+    defaultBranch = main
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[pull]
+    rebase = false
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan

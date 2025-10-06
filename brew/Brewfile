@@ -1,0 +1,74 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "quarkdown-labs/quarkdown"
+
+# Essentials
+brew "git"
+brew "stow"
+brew "wget"
+brew "curl"
+brew "tree"
+brew "htop"
+brew "jq"
+brew "fzf"
+brew "ripgrep"
+brew "fd"
+brew "bat"
+brew "exa"
+brew "zoxide"
+brew "ffmpeg"
+brew "speedtest-cli"
+
+# Development tools
+brew "node"
+brew "python@3.11"
+brew "python@3.10"
+brew "openjdk@17"
+brew "docker"
+brew "docker-compose"
+
+# Version managers
+brew "nvm"
+brew "pyenv"
+
+# Database tools
+#brew "postgresql"
+#brew "redis"
+
+# Text editors and IDEs
+cask "visual-studio-code"
+cask "intellij-idea"
+
+# Fonts
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+
+# Applications
+cask "google-chrome"
+cask "discord"
+cask "spotify"
+cask "iterm2"
+cask "rectangle"
+cask "betterdisplay"
+cask "chatgpt"
+
+# Design and multimedia
+cask "figma"
+
+# Productivity
+cask "notion"
+
+# System utilities
+#cask "disk-utility"
+#cask "activity-monitor"
+#cask "system-preferences"
+#cask "finder"
+#cask "launchpad"
+
+# Virtualization
+#cask "docker"
+
+#mas "Xcode", id: 497799835
+#mas "TestFlight", id: 899247664
