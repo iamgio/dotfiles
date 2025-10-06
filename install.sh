@@ -92,7 +92,7 @@ if ! command -v brew >/dev/null 2>&1; then
 
     # Add Homebrew to PATH
     echo 'eval "$('"$BREW_HOME"'/bin/brew shellenv)"' >> "$HOME/.zprofile"
-    eval "$($BREW_HOME/bin/brew shellenv)"
+    eval "$("$BREW_HOME/bin/brew" shellenv)"
     print_success "Homebrew installed"
 else
     print_success "Homebrew already installed"
