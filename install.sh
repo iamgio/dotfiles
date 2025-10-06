@@ -189,7 +189,11 @@ fi
 if [[ "$IS_MACOS" == true ]]; then
     print_step "Setting up iTerm2 configuration..."
 
-    ITERM_DIR="$(pwd)/iterm2"
+    ITERM_READONLY_CONFIG_DIR="$(pwd)/iterm2"
+    ITERM_WRITABLE_CONFIG_DIR="$HOME/.iterm"
+
+    # Copy the read-only config to an active location, which iTerm2 can write to
+    cp -r "$ITERM_READONLY_CONFIG_DIR" "$ITERM_WRITABLE_CONFIG_DIR"
 
     # Create iTerm2 preferences directory if it doesn't exist
     ITERM_PREFS_DIR="$HOME/Library/Preferences"
@@ -199,7 +203,7 @@ if [[ "$IS_MACOS" == true ]]; then
     print_step "Configuring iTerm2 to load preferences from dotfiles..."
 
     # Tell iTerm2 to use our custom preferences folder
-    defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$ITERM_DIR"
+    defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$ITERM_WRITABLE_CONFIG_DIR"
     defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
     # Install shell integration
@@ -208,14 +212,6 @@ if [[ "$IS_MACOS" == true ]]; then
 
     print_success "iTerm2 configuration setup complete!"
     print_warning "Please restart iTerm2 to apply all changes."
-
-    echo ""
-    echo "Additional iTerm2 setup notes:"
-    echo "1. Open iTerm2 preferences (⌘,)"
-    echo "2. Go to General → Preferences"
-    echo "3. Check 'Load preferences from a custom folder or URL'"
-    echo "4. Set the path to: $ITERM_DIR"
-    echo "5. Restart iTerm2 to load your custom configuration"
 fi
 
 # Final steps
