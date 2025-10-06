@@ -38,7 +38,7 @@ brew "pyenv"
 
 # Text editors and IDEs
 cask "visual-studio-code"
-cask "intellij-idea"
+cask "jetbrains-toolbox"
 
 # Fonts
 cask "font-jetbrains-mono"
