@@ -65,6 +65,7 @@ cask "notion"
 #cask "system-preferences"
 #cask "finder"
 #cask "launchpad"
+cask "logi-options+"
 
 # Virtualization
 cask "docker"
