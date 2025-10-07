@@ -89,9 +89,11 @@ if ! command -v brew >/dev/null 2>&1; then
         BREW_HOME="/home/linuxbrew/.linuxbrew"
     fi
 
+    BREW="$BREW_HOME/bin/brew"
+
     # Add Homebrew to PATH
-    echo 'eval "$('"$BREW_HOME"'/bin/brew shellenv)"' >> "$HOME/.zprofile"
-    eval "$("$BREW_HOME/bin/brew" shellenv)"
+    echo 'eval "$('"$BREW"' shellenv)"' >> "$HOME/.zprofile"
+    eval "$("$BREW" shellenv)"
     print_success "Homebrew installed"
 else
     print_success "Homebrew already installed"
@@ -100,7 +102,7 @@ fi
 # Install Homebrew packages
 print_step "Installing Homebrew packages..."
 if [[ -f "brew/Brewfile" ]]; then
-    brew bundle --file=brew/Brewfile
+    "$BREW" bundle --file=brew/Brewfile
     print_success "Homebrew packages installed"
 else
     print_warning "Brewfile not found, skipping package installation"
