@@ -92,6 +92,7 @@ if ! command -v brew >/dev/null 2>&1; then
     eval "$("$BREW" shellenv)"
     print_success "Homebrew installed"
 else
+    BREW="brew"
     print_success "Homebrew already installed"
 fi
 
