@@ -80,3 +80,11 @@ mas "CopyLess 2 - Clipboard Manager", id: 993841014
 mas "AdBlock Pro for Safari", id: 1018301773
 # mas "Xcode", id: 497799835
 # mas "TestFlight", id: 899247664
+
+# Gaming
+print "Install gaming software? [y/N]: "
+if $stdin.gets.to_s.strip.downcase.start_with?("y")
+    cask "steam"
+    cask "epic-games"
+    cask "openemu"
+end
