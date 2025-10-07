@@ -35,15 +35,14 @@ print_error() {
 
 # Check if running on macOS
 if [[ "$IS_MACOS" != true ]]; then
-    print_error "This script is designed for macOS only."
+    print_warning "This script is designed for macOS."
 fi
 
 # Welcome message
 echo -e "${BLUE}"
-echo "╔═══════════════════════════════════════════════════════════╗"
-echo "║                    Dotfiles Setup                        ║"
-echo "║             macOS Development Environment                 ║"
-echo "╚═══════════════════════════════════════════════════════════╝"
+echo "╔══════════════════════════════════════════════════════════╗"
+echo "║                      Dotfiles Setup                      ║"
+echo "╚══════════════════════════════════════════════════════════╝"
 echo -e "${NC}"
 
 # Ask for confirmation
@@ -228,7 +227,7 @@ fi
 echo
 echo -e "${GREEN}"
 echo "╔═══════════════════════════════════════════════════════════╗"
-echo "║                   Setup Complete!                        ║"
+echo "║                      Setup Complete!                      ║"
 echo "╚═══════════════════════════════════════════════════════════╝"
 echo -e "${NC}"
 
