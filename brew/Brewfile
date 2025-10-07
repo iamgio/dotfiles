@@ -41,6 +41,13 @@ cask "visual-studio-code"
 cask "intellij-idea"
 cask "jetbrains-toolbox"
 
+# QuickLook plugins
+cask "qlcolorcode"
+cask "qlimagesize"
+cask "qlmarkdown"
+cask "quicklook-csv"
+cask "quicklook-json"
+
 # Fonts
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
@@ -49,13 +56,15 @@ cask "font-jetbrains-mono-nerd-font"
 cask "google-chrome"
 cask "discord"
 cask "spotify"
-cask "iterm2"
-cask "rectangle"
+cask "iterm2" # Terminal emulator
+cask "rectangle" # Window management
 cask "betterdisplay"
 cask "chatgpt"
 
 # Design and multimedia
 cask "figma"
+cask "audacity" # Audio editor
+cask "kdenlive" # Video editor
 
 # Productivity
 cask "notion"
