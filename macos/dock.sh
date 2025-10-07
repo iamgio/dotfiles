@@ -11,6 +11,7 @@ dock_apps=(
     "/Applications/Spotify.app"
     "/Applications/WhatsApp.app"
     "/System/Applications/Notes.app"
+    "/Applications/Trello.app"
     "/Applications/Microsoft To Do.app"
     "/Applications/ChatGPT.app"
     "/Applications/IntelliJ IDEA.app"

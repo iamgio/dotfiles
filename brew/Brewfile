@@ -73,6 +73,7 @@ cask "docker"
 
 mas "WhatsApp Messenger", id: 310633997
 mas "Telegram", id: 747648890
+mas "Trello", id: 1278508951
 mas "Microsoft To Do", id: 1274495053
 mas "CotEditor", id: 1024640650
 mas "CopyLess 2 - Clipboard Manager", id: 993841014
