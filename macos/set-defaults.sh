@@ -216,11 +216,14 @@ sudo pmset -b sleep 15
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
-# Set Cmd+Shift+L as shortcut for screenshot selection
+# Set Cmd+Shift+Option+L as shortcut for screenshot selection (save to desktop)
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 30 '<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>108</integer><integer>37</integer><integer>1703936</integer></array><key>type</key><string>standard</string></dict></dict>'
 
+# Set Cmd+Shift+L as shortcut for screenshot selection (copy to clipboard)
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 31 '<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>108</integer><integer>37</integer><integer>1179648</integer></array><key>type</key><string>standard</string></dict></dict>'
+
 # Set Cmd+Shift+Ctrl+L as shortcut for interactive screenshot (drag rectangle borders)
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 184 '<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>108</integer><integer>37</integer><integer>1966080</integer></array><key>type</key><string>standard</string></dict></dict>'
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 184 '<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>108</integer><integer>37</integer><integer>1441792</integer></array><key>type</key><string>standard</string></dict></dict>'
 
 # Disable shadow in screenshots
 # defaults write com.apple.screencapture disable-shadow -bool true
