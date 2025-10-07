@@ -11,11 +11,6 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-IS_MACOS=false
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    IS_MACOS=true
-fi
-
 # Helper functions
 print_step() {
     echo -e "${BLUE}==>${NC} $1"
@@ -33,12 +28,13 @@ print_error() {
     echo -e "${RED}✗${NC} $1"
 }
 
-# Check if running on macOS
-if [[ "$IS_MACOS" != true ]]; then
-    print_warning "This script is designed for macOS."
+is_macos=false
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    is_macos=true
+else
+    print_warning "This script is designed for macOS. $OSTYPE detected. The setup will be partial."
 fi
 
-# Welcome message
 echo -e "${BLUE}"
 echo "╔══════════════════════════════════════════════════════════╗"
 echo "║                      Dotfiles Setup                      ║"
@@ -62,7 +58,7 @@ if [[ ! -f "README.md" ]] || [[ ! -d "git" ]]; then
 fi
 
 # Install Xcode Command Line Tools if not present.
-if ! command -v xcode-select >/dev/null 2>&1 && [[ "$IS_MACOS" == true ]]; then
+if ! command -v xcode-select >/dev/null 2>&1 && [[ "$is_macos" == true ]]; then
     print_step "Installing Xcode Command Line Tools..."
     print_warning "This may take a few minutes and will open a dialog box."
     xcode-select --install
@@ -83,7 +79,7 @@ if ! command -v brew >/dev/null 2>&1; then
     print_step "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    if [[ "$IS_MACOS" == true ]]; then
+    if [[ "$is_macos" == true ]]; then
         BREW_HOME="/opt/homebrew"
     else
         BREW_HOME="/home/linuxbrew/.linuxbrew"
@@ -187,7 +183,7 @@ else
 fi
 
 # Set up iTerm2 configuration
-if [[ "$IS_MACOS" == true ]]; then
+if [[ "$is_macos" == true ]]; then
     print_step "Setting up iTerm2 configuration..."
 
     ITERM_CONFIG_DIR="$(pwd)/iterm2"
