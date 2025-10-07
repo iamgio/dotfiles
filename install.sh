@@ -229,14 +229,7 @@ echo "║                      Setup Complete!                      ║"
 echo "╚═══════════════════════════════════════════════════════════╝"
 echo -e "${NC}"
 
-print_success "Dotfiles setup completed successfully!"
 echo
-echo "Next steps:"
-echo "1. Restart your terminal or run: source ~/.zshrc"
-echo "2. Configure Powerlevel10k by running: p10k configure"
-echo "3. Update your Git configuration in ~/.config/git/config"
-echo "4. Customize your setup as needed"
-echo
-echo "Backup of your previous dotfiles: $backup_dir"
+echo "Backup of previous dotfiles: $backup_dir"
 echo
 print_warning "Some changes may require a system restart to take effect."
