@@ -6,6 +6,7 @@
 # List of applications to add to dock (in order)
 dock_apps=(
     "/System/Applications/Mail.app"
+    "/Applications/Safari.app"
     "/Applications/Telegram.app"
     "/Applications/Spotify.app"
     "/Applications/WhatsApp.app"
@@ -33,6 +34,9 @@ add_app_to_dock() {
 
 # Clear all dock items except Finder and Trash
 defaults write com.apple.dock persistent-apps -array
+
+# Remove "Downloads" directory from Dock
+defaults write com.apple.dock persistent-others -array
 
 # Add each app to dock
 echo "Adding applications to dock..."
