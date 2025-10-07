@@ -169,6 +169,9 @@ defaults write com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID -stri
 # Energy saving                                                              #
 ###############################################################################
 
+# Show battery percentage in the menu bar
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
 # Enable lid wakeup
 # sudo pmset -a lidwake 1
 
