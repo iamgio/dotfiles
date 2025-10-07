@@ -207,6 +207,22 @@ if [[ "$is_macos" == true ]]; then
     print_warning "Please restart iTerm2 to apply all changes."
 fi
 
+# Set up Dock
+if [[ "$is_macos" == true ]] && [[ -f "macos/dock.sh" ]]; then
+    print_step "Setting up Dock configuration..."
+    echo
+    print_warning "Do you want to configure the Dock? [y/N]"
+    read -p "" -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        chmod +x macos/dock.sh
+        macos/dock.sh
+        print_success "Dock configuration applied"
+    else
+        print_warning "Skipped Dock configuration"
+    fi
+fi
+
 # Final steps
 print_step "Final setup steps..."
 
