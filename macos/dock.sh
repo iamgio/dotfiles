@@ -14,6 +14,7 @@ dock_apps=(
     "/Applications/Trello.app"
     "/Applications/Microsoft To Do.app"
     "/Applications/ChatGPT.app"
+    "/Applications/Visual Studio Code.app"
     "/Applications/IntelliJ IDEA.app"
     "/Applications/Figma.app"
     "/Applications/iTerm.app"
