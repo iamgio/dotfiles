@@ -126,8 +126,9 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=225'
 
 # source /Users/gio/zsh_customization/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export FZF_CTRL_T_OPTS="--preview 'cat {}'"
-#source /Users/gio/zsh_customization/fzf/key-bindings.zsh
+export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --border=none --preview 'bat --color=always --style=numbers --line-range :500 {}' --preview-window=right:50%"
+source /Users/gio/zsh_customization/fzf/key-bindings.zsh
+source <(fzf --zsh)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
