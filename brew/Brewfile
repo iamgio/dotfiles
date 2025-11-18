@@ -44,7 +44,6 @@ cask "jetbrains-toolbox"
 # QuickLook plugins
 cask "qlcolorcode"
 cask "qlimagesize"
-cask "qlmarkdown"
 cask "quicklook-csv"
 cask "quicklook-json"
 

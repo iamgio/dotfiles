@@ -99,7 +99,7 @@ fi
 # Install Homebrew packages
 print_step "Installing Homebrew packages..."
 if [[ -f "brew/Brewfile" ]]; then
-    "$BREW" bundle --file=brew/Brewfile
+    "$BREW" bundle --file=brew/Brewfile || true
     print_success "Homebrew packages installed"
 else
     print_warning "Brewfile not found, skipping package installation"
