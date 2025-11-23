@@ -262,6 +262,9 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Hide .app extension in Finder, Spotlight, and Dock
+defaults write NSGlobalDomain AppleShowAppExtensions -bool false
+
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 
