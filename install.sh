@@ -166,23 +166,6 @@ for package in "${packages[@]}"; do
     fi
 done
 
-# Set macOS defaults
-print_step "Setting macOS defaults..."
-if [[ -f "macos/set-defaults.sh" ]]; then
-    print_warning "This will change your macOS system settings. Continue? [y/N]"
-    read -p "" -n 1 -r
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        chmod +x macos/set-defaults.sh
-        macos/set-defaults.sh
-        print_success "macOS defaults applied"
-    else
-        print_warning "Skipped macOS defaults"
-    fi
-else
-    print_warning "macOS defaults script not found"
-fi
-
 # Set up iTerm2 configuration
 if [[ "$is_macos" == true ]]; then
     print_step "Setting up iTerm2 configuration..."
@@ -232,6 +215,23 @@ if [[ "$SHELL" != "$(which zsh)" ]]; then
     print_step "Setting zsh as default shell..."
     chsh -s "$(which zsh)"
     print_success "Default shell set to zsh"
+fi
+
+# Set macOS defaults
+print_step "Setting macOS defaults..."
+if [[ -f "macos/set-defaults.sh" ]]; then
+    print_warning "This will change your macOS system settings. Continue? [y/N]"
+    read -p "" -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        chmod +x macos/set-defaults.sh
+        macos/set-defaults.sh
+        print_success "macOS defaults applied"
+    else
+        print_warning "Skipped macOS defaults"
+    fi
+else
+    print_warning "macOS defaults script not found"
 fi
 
 # Completion message
