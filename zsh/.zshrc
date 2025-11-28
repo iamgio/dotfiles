@@ -124,10 +124,7 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 # orange theme: 220
 ZSH_HIGHLIGHT_STYLES[path]='fg=225'
 
-# source /Users/gio/zsh_customization/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --border=none --preview 'bat --color=always --style=numbers --line-range :500 {}' --preview-window=right:50%"
-source /Users/gio/zsh_customization/fzf/key-bindings.zsh
 source <(fzf --zsh)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -135,6 +132,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 alias 256colors="curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/e50a28ec54188d2413518788de6c6367ffcea4f7/print256colours.sh | bash"
 
 # Git utils
+
+alias gcml="gcm && gl" # git checkout main and git pull
+
+# Create and push a git tag for a release, synced with main branch
 git_release_tag() {
   local RELEASE_VERSION="$1"
   if [ -z "$RELEASE_VERSION" ]; then
@@ -142,8 +143,19 @@ git_release_tag() {
     return 1
   fi
 
-  git checkout main && \
-  git pull && \
+  gcml && \
   git tag "$RELEASE_VERSION" && \
   git push origin "tag" "$RELEASE_VERSION"
+}
+
+# Delete a git tag both locally and remotely
+git_delete_tag() {
+  local TAG_NAME="$1"
+  if [ -z "$TAG_NAME" ]; then
+    echo "Usage: delete_tag <tag_name>"
+    return 1
+  fi
+
+  git tag -d "$TAG_NAME" && \
+  git push origin ":refs/tags/$TAG_NAME"
 }
