@@ -67,6 +67,7 @@ cask "kdenlive" # Video editor
 
 # Productivity
 cask "notion"
+cask "claude-code"
 
 # System utilities
 #cask "disk-utility"
