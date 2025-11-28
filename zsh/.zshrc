@@ -124,8 +124,12 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 # orange theme: 220
 ZSH_HIGHLIGHT_STYLES[path]='fg=225'
 
+# fzf
 export FZF_DEFAULT_OPTS="--height 80% --layout=reverse --border=none --preview 'bat --color=always --style=numbers --line-range :500 {}' --preview-window=right:50%"
 source <(fzf --zsh)
+
+# zoxide
+eval "$(zoxide init zsh --cmd cd)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
