@@ -133,6 +133,11 @@ if [[ ! -d "$ZSH_CUSTOM_PLUGINS/zsh-syntax-highlighting" ]]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM_PLUGINS/zsh-syntax-highlighting"
 fi
 
+# you-should-use
+if [[ ! -d "$ZSH_CUSTOM_PLUGINS/you-should-use" ]]; then
+    git clone https://github.com/MichaelAquilina/zsh-you-should-use.git "$ZSH_CUSTOM_PLUGINS/you-should-use"
+fi
+
 print_success "Zsh plugins installed"
 
 # Backup existing dotfiles

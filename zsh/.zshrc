@@ -80,6 +80,7 @@ plugins=(
 	git
 	macos
 	zsh-syntax-highlighting
+  you-should-use
 )
 
 source $ZSH/oh-my-zsh.sh
