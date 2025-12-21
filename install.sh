@@ -196,6 +196,16 @@ if [[ "$is_macos" == true ]]; then
     print_warning "Please restart iTerm2 to apply all changes."
 fi
 
+# Set up CotEditor configuration
+if [[ "$is_macos" == true ]] && [[ -f "/Applications/CotEditor.app" ]]; then
+    print_step "Setting up CotEditor configuration..."
+
+    # Install cot CLI
+    ln -s /Applications/CotEditor.app/Contents/SharedSupport/bin/cot /usr/local/bin/cot
+
+    print_success "CotEditor configuration setup complete!"
+fi
+
 # Set up Dock
 if [[ "$is_macos" == true ]] && [[ -f "macos/dock.sh" ]]; then
     print_step "Setting up Dock configuration..."
