@@ -251,3 +251,6 @@ echo
 echo "Backup of previous dotfiles: $backup_dir"
 echo
 print_warning "Some changes may require a system restart to take effect."
+echo
+echo "Caveats:"
+cat caveats.txt

@@ -1,0 +1,2 @@
+CotEditor:
+- Import coteditor/settings.cotsettings
