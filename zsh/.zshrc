@@ -80,6 +80,7 @@ plugins=(
 	git
 	macos
 	zsh-syntax-highlighting
+  zsh-autopair
   you-should-use
 )
 

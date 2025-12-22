@@ -133,6 +133,11 @@ if [[ ! -d "$ZSH_CUSTOM_PLUGINS/zsh-syntax-highlighting" ]]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM_PLUGINS/zsh-syntax-highlighting"
 fi
 
+# zsh-autopair
+if [[ ! -d "$ZSH_CUSTOM_PLUGINS/zsh-autopair" ]]; then
+    git clone https://github.com/hlissner/zsh-autopair "$ZSH_CUSTOM_PLUGINS/zsh-autopair"
+fi
+
 # you-should-use
 if [[ ! -d "$ZSH_CUSTOM_PLUGINS/you-should-use" ]]; then
     git clone https://github.com/MichaelAquilina/zsh-you-should-use.git "$ZSH_CUSTOM_PLUGINS/you-should-use"
