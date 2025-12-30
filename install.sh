@@ -145,6 +145,9 @@ fi
 
 print_success "Zsh plugins installed"
 
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Backup existing dotfiles
 print_step "Backing up existing dotfiles..."
 backup_dir="$HOME/.dotfiles-backup-$(date +%Y%m%d-%H%M%S)"
