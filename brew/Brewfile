@@ -3,6 +3,7 @@
 # tap "homebrew/cask-fonts"
 # tap "homebrew/core"
 tap "quarkdown-labs/quarkdown"
+tap "withgraphite/tap"
 
 # Essentials
 brew "git"
@@ -16,7 +17,7 @@ brew "ripgrep"
 brew "fd"
 brew "bat"
 brew "zoxide"
-brew "withgraphite/tap/graphite"
+brew "graphite"
 brew "speedtest-cli"
 brew "mas" # Mac App Store CLI
 
