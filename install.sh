@@ -205,11 +205,12 @@ if [[ "$is_macos" == true ]]; then
 fi
 
 # Set up CotEditor configuration
-if [[ "$is_macos" == true ]] && [[ -f "/Applications/CotEditor.app" ]]; then
+if [[ "$is_macos" == true ]]; then
     print_step "Setting up CotEditor configuration..."
 
     # Install cot CLI
-    ln -s /Applications/CotEditor.app/Contents/SharedSupport/bin/cot /usr/local/bin/cot
+    sudo mkdir -p /usr/local/bin
+    sudo ln -s /Applications/CotEditor.app/Contents/SharedSupport/bin/cot /usr/local/bin/cot
 
     print_success "CotEditor configuration setup complete!"
 fi
