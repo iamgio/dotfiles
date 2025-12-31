@@ -146,7 +146,13 @@ fi
 print_success "Zsh plugins installed"
 
 # Install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+if ! command -v rustc >/dev/null 2>&1; then
+    print_step "Installing Rust..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    print_success "Rust installed"
+else
+    print_success "Rust already installed"
+fi
 
 # Backup existing dotfiles
 print_step "Backing up existing dotfiles..."
