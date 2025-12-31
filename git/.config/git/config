@@ -18,6 +18,6 @@
     rebase = false
 
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+    added = cyan
+    changed = yellow
+    untracked = white
