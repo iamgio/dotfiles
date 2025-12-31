@@ -43,3 +43,7 @@ Desktop.ini
 
 # Stow ignore file
 .stow-local-ignore
+
+# Git
+git/.config/*
+!git/.config/git
