@@ -10,7 +10,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-export JAVA_HOME=/Users/gio/Library/Java/JavaVirtualMachines/azul-17.0.5/Contents/Home
+JAVA_VERSION=17
+export JAVA_HOME=$(brew --prefix openjdk@$JAVA_VERSION)/libexec/openjdk.jdk/Contents/Home
 
 QUARKDOWN_HOME=/Users/gio/Dev/JVM/quarkdown/build/install/quarkdown
 
