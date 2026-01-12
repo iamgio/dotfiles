@@ -3,7 +3,6 @@
     email = giogar2705@gmail.com
 
 [core]
-    editor = code --wait
     autocrlf = input
     safecrlf = true
 
