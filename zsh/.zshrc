@@ -145,6 +145,7 @@ alias 256colors="curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f8
 # Git utils
 
 alias gcml="gcm && gl" # git checkout main and git pull
+alias gst="git stash"
 alias git_bump_release_tag="semverx bump-tag --tag --push"
 
 # Create and push a git tag for a release, synced with main branch
