@@ -18,6 +18,7 @@ brew "fd"
 brew "bat"
 brew "zoxide"
 brew "graphite"
+brew "vsce" # VS Code Extensions
 brew "speedtest-cli"
 brew "mas" # Mac App Store CLI
 
@@ -26,6 +27,7 @@ brew "node"
 brew "python@3.11"
 brew "python@3.10"
 brew "openjdk@17"
+brew "yarn"
 
 # Version managers
 brew "nvm"
