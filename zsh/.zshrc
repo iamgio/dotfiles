@@ -13,7 +13,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 JAVA_VERSION=17
 export JAVA_HOME=$(brew --prefix openjdk@$JAVA_VERSION)/libexec/openjdk.jdk/Contents/Home
 
-QUARKDOWN_HOME=/Users/gio/Dev/JVM/quarkdown/build/install/quarkdown
+QUARKDOWN_HOME=/Users/gio/Dev/qd/quarkdown/build/install/quarkdown
 
 export PATH=$JAVA_HOME/bin:$QUARKDOWN_HOME/bin:/Applications/XAMPP/xamppfiles/bin:"/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/bin":$PATH
 

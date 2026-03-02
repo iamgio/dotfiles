@@ -18,6 +18,7 @@ brew "fd"
 brew "bat"
 brew "zoxide"
 brew "graphite"
+brew "terminal-notifier"
 brew "speedtest-cli"
 brew "mas" # Mac App Store CLI
 

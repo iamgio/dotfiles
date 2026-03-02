@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json.schemastore.org/claude-code-settings.json",
+    "model": "opus",
+    "hooks": {
+        "Notification": [
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "terminal-notifier -title \"🔔 $(basename $(pwd))\" -message \"Input needed\" -sender com.apple.Terminal"
+                    }
+                ]
+            }
+        ],
+        "Stop": [
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "terminal-notifier -title \"✅ $(basename $(pwd))\" -message \"Task completed\" -sender com.apple.Terminal"
+                    },
+                    {
+                        "type": "command",
+                        "command": "say \"Claude Code\" -v Bells"
+                    }
+                ]
+            }
+        ]
+    },
+    "feedbackSurveyState": {
+        "lastShownTime": 1754087414048
+    }
+}
