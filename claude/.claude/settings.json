@@ -9,6 +9,10 @@
                     {
                         "type": "command",
                         "command": "terminal-notifier -title \"🔔 $(basename $(pwd))\" -message \"Input needed\" -sender com.apple.Terminal"
+                    },
+                    {
+                        "type": "command",
+                        "command": "say \"Claude Code needs your input\""
                     }
                 ]
             }
