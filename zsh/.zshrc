@@ -148,6 +148,11 @@ alias gcml="gcm && gl" # git checkout main and git pull
 alias gst="git stash"
 alias git_bump_release_tag="semverx bump-tag --tag --push"
 
+# Graphite
+alias gtc="gt c -am"
+alias gtm="gt m -a"
+alias gtms="gtm && gt ss"
+
 # Create and push a git tag for a release, synced with main branch
 git_release_tag() {
   local RELEASE_VERSION="$1"
