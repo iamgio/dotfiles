@@ -63,6 +63,7 @@ cask "chatgpt"
 
 # Design and multimedia
 cask "figma"
+cask "motionik" # Screen recording
 cask "affinity" # Photo/vector editor
 cask "audacity" # Audio editor
 cask "kdenlive" # Video editor
