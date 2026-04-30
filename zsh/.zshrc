@@ -140,12 +140,16 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 alias cat="bat"
 alias zshrc="cot ~/.zshrc || code ~/.zshrc"
+alias tmuxconf="cot ~/.tmux.conf || code ~/.tmux.conf"
+alias tmuxconfreload="tmux source-file ~/.tmux.conf && echo 'Tmux config reloaded'"
 alias 256colors="curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/e50a28ec54188d2413518788de6c6367ffcea4f7/print256colours.sh | bash"
 
 # Git utils
 
 alias gcml="gcm && gl" # git checkout main and git pull
+alias gc="git commit -am"
 alias gst="git stash"
+alias gcam="git add . && git commit --amend --no-edit && git push --force-with-lease" # amend & push
 alias git_bump_release_tag="semverx bump-tag --tag --push"
 
 # Graphite

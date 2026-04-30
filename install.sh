@@ -183,7 +183,7 @@ done
 # Use Stow to create symlinks
 print_step "Creating symlinks with Stow..."
 
-packages=("git" "zsh" "claude")
+packages=("git" "zsh" "tmux" "claude")
 for package in "${packages[@]}"; do
     if [[ -d "$package" ]]; then
         print_step "Stowing $package..."
