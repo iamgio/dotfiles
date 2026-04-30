@@ -142,6 +142,7 @@ alias cat="bat"
 alias zshrc="cot ~/.zshrc || code ~/.zshrc"
 alias tmuxconf="cot ~/.tmux.conf || code ~/.tmux.conf"
 alias tmuxconfreload="tmux source-file ~/.tmux.conf && echo 'Tmux config reloaded'"
+alias hsconfreload="hs -c 'hs.reload()' && echo 'Hammerspoon config reloaded'"
 alias 256colors="curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/e50a28ec54188d2413518788de6c6367ffcea4f7/print256colours.sh | bash"
 
 # Git utils

@@ -20,6 +20,7 @@ brew "zoxide"
 brew "graphite"
 brew "terminal-notifier"
 brew "tmux"
+brew "hammerspoon" # Shortcut automation
 brew "vsce" # VS Code Extensions
 brew "speedtest-cli"
 brew "mas" # Mac App Store CLI
