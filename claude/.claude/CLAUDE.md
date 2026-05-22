@@ -7,4 +7,4 @@ Keep functions and classes small and focused on a single responsibility.
 It's possible to over-engineer when necessary to achieve high cohesion, low coupling, to anticipate future changes,
 leveraging design patterns, such as strategy and visitor (frequent in this codebase), and best practices.
 
-When using the `cd` command, make sure to explicitly refer to `builtin cd` to avoid conflicts.
+When using the `cd` command (and *only* `cd`, not `npx`, `git`, or others), make sure to explicitly refer to `builtin cd` to avoid conflicts.
