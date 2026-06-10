@@ -97,10 +97,17 @@ else
 fi
 
 # Install Homebrew packages
-print_step "Installing Homebrew packages..."
 if [[ -f "brew/Brewfile" ]]; then
-    "$BREW" bundle --file=brew/Brewfile || true
-    print_success "Homebrew packages installed"
+    print_warning "Do you want to install Homebrew packages from Brewfile? [y/N]"
+    read -p "" -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        print_step "Installing Homebrew packages..."
+        "$BREW" bundle --file=brew/Brewfile || true
+        print_success "Homebrew packages installed"
+    else
+        print_warning "Skipped Homebrew package installation"
+    fi
 else
     print_warning "Brewfile not found, skipping package installation"
 fi
