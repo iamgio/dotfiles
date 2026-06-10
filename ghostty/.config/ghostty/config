@@ -3,7 +3,6 @@ font-size = 13
 font-feature = liga
 font-feature = calt
 adjust-cell-width = -4%
-font-thicken
 
 background = 39153B
 background-opacity-cells = true
@@ -22,4 +21,18 @@ mouse-hide-while-typing = true
 shell-integration-features = true
 
 palette = 0=#121212
-palette = 2=#9bc53d
+palette = 1=#ff5c5c
+palette = 2=#bce05c
+palette = 3=#ffe066
+palette = 4=#8ab8ff
+palette = 5=#ff85ff
+palette = 6=#7afff0
+palette = 7=#f8f8f2
+palette = 8=#6c6c6c
+palette = 9=#ff7a7a
+palette = 10=#b8e060
+palette = 11=#fff0b3
+palette = 12=#7ac6ff
+palette = 13=#ff9eff
+palette = 14=#a3fff5
+palette = 15=#ffffff
