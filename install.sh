@@ -183,7 +183,7 @@ done
 # Use Stow to create symlinks
 print_step "Creating symlinks with Stow..."
 
-packages=("git" "zsh" "tmux" "hammerspoon" "claude")
+packages=("git" "zsh" "ghostty" "tmux" "hammerspoon" "claude")
 for package in "${packages[@]}"; do
     if [[ -d "$package" ]]; then
         print_step "Stowing $package..."
@@ -191,31 +191,6 @@ for package in "${packages[@]}"; do
         print_success "$package configuration linked"
     fi
 done
-
-# Set up iTerm2 configuration
-if [[ "$is_macos" == true ]]; then
-    print_step "Setting up iTerm2 configuration..."
-
-    ITERM_CONFIG_DIR="$(pwd)/iterm2"
-
-    # Create iTerm2 preferences directory if it doesn't exist
-    ITERM_PREFS_DIR="$HOME/Library/Preferences"
-    mkdir -p "$ITERM_PREFS_DIR"
-
-    # Set iTerm2 to use custom preferences directory
-    print_step "Configuring iTerm2 to load preferences from dotfiles..."
-
-    # Tell iTerm2 to use our custom preferences folder
-    defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$ITERM_CONFIG_DIR"
-    defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-
-    # Install shell integration
-    print_step "Installing iTerm2 shell integration..."
-    curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
-
-    print_success "iTerm2 configuration setup complete!"
-    print_warning "Please restart iTerm2 to apply all changes."
-fi
 
 # Set up CotEditor configuration
 if [[ "$is_macos" == true ]]; then

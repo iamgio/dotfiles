@@ -58,7 +58,7 @@ cask "font-jetbrains-mono-nerd-font"
 cask "google-chrome"
 cask "discord"
 cask "spotify"
-cask "iterm2" # Terminal emulator
+cask "ghostty" # Terminal emulator
 cask "rectangle" # Window management
 cask "betterdisplay"
 cask "chatgpt"

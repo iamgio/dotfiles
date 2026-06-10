@@ -134,8 +134,6 @@ source <(fzf --zsh)
 # zoxide
 eval "$(zoxide init zsh --cmd cd)"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 # Misc aliases
 
 alias cat="bat"

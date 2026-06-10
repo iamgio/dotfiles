@@ -17,7 +17,7 @@ dock_apps=(
     "/Applications/Visual Studio Code.app"
     "/Applications/IntelliJ IDEA.app"
     "/Applications/Figma.app"
-    "/Applications/iTerm.app"
+    "/Applications/Ghostty.app"
     "/Applications/Google Chrome.app"
 )
 

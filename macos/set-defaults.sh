@@ -626,7 +626,7 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 #sudo mdutil -E / > /dev/null
 
 ###############################################################################
-# Terminal & iTerm 2                                                         #
+# Terminal                                                                    #
 ###############################################################################
 
 # Only use UTF-8 in Terminal.app
@@ -644,20 +644,14 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 # Disable the annoying line marks
 defaults write com.apple.Terminal ShowLineMarks -int 0
 
-# Don't display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
-# Disable iTerm2's native full screen to use macOS native full screen
-defaults write com.googlecode.iterm2 UseLionStyleFullscreen -bool false
-
-# Set iTerm2 as default terminal (requires macOS 10.15+)
+# Set Ghostty as default terminal (requires macOS 10.15+)
 if [[ $(sw_vers -productVersion | cut -d. -f1) -ge 10 ]] && [[ $(sw_vers -productVersion | cut -d. -f2) -ge 15 ]]; then
     defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
-        '{LSHandlerContentType="public.unix-executable";LSHandlerRoleAll="com.googlecode.iterm2";}'
+        '{LSHandlerContentType="public.unix-executable";LSHandlerRoleAll="com.mitchellh.ghostty";}'
     defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
-        '{LSHandlerContentType="public.shell-script";LSHandlerRoleAll="com.googlecode.iterm2";}'
+        '{LSHandlerContentType="public.shell-script";LSHandlerRoleAll="com.mitchellh.ghostty";}'
     defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
-        '{LSHandlerContentType="com.apple.terminal.shell-script";LSHandlerRoleAll="com.googlecode.iterm2";}'
+        '{LSHandlerContentType="com.apple.terminal.shell-script";LSHandlerRoleAll="com.mitchellh.ghostty";}'
 fi
 
 ###############################################################################

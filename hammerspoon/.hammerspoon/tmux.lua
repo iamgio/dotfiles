@@ -1,14 +1,13 @@
 local M = {}
 
 function M.focusPane(n)
-  hs.osascript.applescript(string.format([[
-    tell application "iTerm"
-      activate
-      tell current session of current window
-        write text (character id 2) & "%d" without newline
-      end tell
-    end tell
-  ]], n))
+  hs.application.launchOrFocus("Ghostty")
+  local app = hs.application.find("Ghostty")
+  if app then
+    app:activate()
+    hs.eventtap.keyStroke({"ctrl"}, "/", 0, app)
+    hs.eventtap.keyStroke({}, tostring(n), 0, app)
+  end
 end
 
 return M
