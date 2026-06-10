@@ -131,7 +131,8 @@
     ],
     "deny": [
       "Bash(cd *)"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "hooks": {
     "Notification": [
@@ -165,7 +166,11 @@
       }
     ]
   },
+  "skipAutoPermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754087414048
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
   }
 }
