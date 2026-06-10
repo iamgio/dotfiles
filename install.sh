@@ -200,8 +200,11 @@ packages=("git" "zsh" "ghostty" "tmux" "hammerspoon" "claude")
 for package in "${packages[@]}"; do
     if [[ -d "$package" ]]; then
         print_step "Stowing $package..."
-        stow "$package"
-        print_success "$package configuration linked"
+        if stow "$package" 2>/dev/null; then
+            print_success "$package configuration linked"
+        else
+            print_warning "$package has existing files; skipping (re-run with 'stow -R $package' to restow)"
+        fi
     fi
 done
 
