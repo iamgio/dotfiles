@@ -2,6 +2,7 @@ font-family = "JetBrainsMono Nerd Font"
 font-size = 13
 font-feature = liga
 font-feature = calt
+adjust-cell-width = -3%
 
 background = 39153B
 background-opacity-cells = true
@@ -9,8 +10,6 @@ background-opacity-cells = true
 background-opacity = 0.8
 background-blur-radius = 25
 
-window-padding-x = 4
-window-padding-y = 4
 window-padding-balance = true
 
 cursor-style = block
@@ -21,5 +20,4 @@ mouse-hide-while-typing = true
 
 shell-integration-features = true
 
-palette = 1=#ff2d2d
-palette = 9=#ff5555
+palette = 0=#121212
