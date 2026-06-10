@@ -115,9 +115,15 @@ fi
 # Install misc tools
 print_step "Installing miscellaneous tools..."
 # semverx
-git clone --recurse-submodules https://github.com/iamgio/semverx $HOME/.local/share/semverx
-chmod +x $HOME/.local/share/semverx/semverx.sh
-sudo ln -s "$HOME/.local/share/semverx/semverx.sh" /usr/local/bin/semverx
+if ! command -v semverx >/dev/null 2>&1; then
+    print_step "Installing semverx..."
+    git clone --recurse-submodules https://github.com/iamgio/semverx "$HOME/.local/share/semverx"
+    chmod +x "$HOME/.local/share/semverx/semverx.sh"
+    sudo ln -s "$HOME/.local/share/semverx/semverx.sh" /usr/local/bin/semverx
+    print_success "semverx installed"
+else
+    print_success "semverx already installed"
+fi
 
 # Install Oh My Zsh if not present
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
