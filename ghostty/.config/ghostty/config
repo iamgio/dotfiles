@@ -20,6 +20,8 @@ mouse-hide-while-typing = true
 
 shell-integration-features = true
 
+keybind = shift+enter=text:\x1b\r
+
 palette = 0=#121212
 palette = 1=#ff5c5c
 palette = 2=#bce05c
