@@ -37,7 +37,7 @@
       "Bash(wc *)",
       "Bash(diff *)",
       "Bash(man *)",
-      "Bash(builtin cd *)",
+      "Bash(cd *)",
       "Bash(mkdir *)",
       "Bash(touch *)",
       "Bash(cp *)",
@@ -128,9 +128,6 @@
       "Bash(docker version*)",
       "Bash(docker build *)",
       "Bash(docker compose build*)"
-    ],
-    "deny": [
-      "Bash(cd *)"
     ],
     "defaultMode": "auto"
   },
