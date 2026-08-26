@@ -5,6 +5,7 @@
 [core]
     autocrlf = input
     safecrlf = true
+	pager = delta
 
 [init]
     defaultBranch = main
@@ -20,3 +21,10 @@
     added = cyan
     changed = yellow
     untracked = white
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+[merge]
+	conflictStyle = zdiff3

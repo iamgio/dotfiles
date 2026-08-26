@@ -47,3 +47,4 @@ Desktop.ini
 # Git
 git/.config/*
 !git/.config/git
+!git/.config/lazygit

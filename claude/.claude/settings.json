@@ -163,11 +163,12 @@
       }
     ]
   },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
+  },
   "skipAutoPermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754087414048
   },
-  "enabledPlugins": {
-    "superpowers@claude-plugins-official": true
-  }
+  "model": "claude-fable-5[1m]"
 }

@@ -20,6 +20,8 @@ brew "zoxide"
 brew "graphite"
 brew "terminal-notifier"
 brew "tmux"
+brew "lazygit"
+brew "git-delta" # Diff viewer
 brew "hammerspoon" # Shortcut automation
 brew "vsce" # VS Code Extensions
 brew "speedtest-cli"
@@ -27,6 +29,7 @@ brew "mas" # Mac App Store CLI
 
 # Development tools
 brew "node"
+brew "bun"
 brew "python@3.11"
 brew "python@3.10"
 brew "openjdk@17"

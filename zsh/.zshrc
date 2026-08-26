@@ -133,10 +133,12 @@ source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init zsh --cmd cd)"
+export _ZO_DOCTOR=0
 
 # Misc aliases
 
 alias cat="bat"
+alias d="lazygit --use-config-file=$HOME/.config/lazygit/config.yml"
 alias zshrc="cot ~/.zshrc || code ~/.zshrc"
 alias tmuxconf="cot ~/.tmux.conf || code ~/.tmux.conf"
 alias tmuxconfreload="tmux source-file ~/.tmux.conf && echo 'Tmux config reloaded'"
@@ -146,7 +148,7 @@ alias 256colors="curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f8
 # Git utils
 
 alias gcml="gcm && gl" # git checkout main and git pull
-alias gc="git add . && git commit -m && git push"
+alias gc="git add . && git commit -m"
 alias gst="git stash"
 alias gcam="git add . && git commit --amend --no-edit && git push --force-with-lease" # amend & push
 alias git_bump_release_tag="semverx bump-tag --tag --push"

@@ -1,0 +1,25 @@
+git:
+  diffRenderers:
+    - colorArg: always
+      command: delta --dark --paging=never
+gui:
+  showCommandLog: false
+  expandFocusedSidePanel: true
+  expandedSidePanelWeight: 2
+  shrinkSidePanelsToContent: true
+  showDivergenceFromBaseBranch: arrowAndNumber
+  showNumstatInFilesView: true
+  filterMode: fuzzy
+  sidePanels:
+    - [status]
+    - [files, worktrees, submodules]
+    - [branches, remotes, tags]
+    - [commits]
+    - [stash]
+
+keybinding:
+  universal:
+    prevBlock: [h, <backtab>]
+    nextBlock: [l, <tab>]
+    focusMainView: [<right>, "0"]
+    return: [<esc>, <left>]
