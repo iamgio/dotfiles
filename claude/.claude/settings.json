@@ -131,6 +131,7 @@
     ],
     "defaultMode": "auto"
   },
+  "model": "claude-fable-5-1[1m]",
   "hooks": {
     "Notification": [
       {
@@ -166,9 +167,10 @@
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true
   },
+  "tui": "default",
+  "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754087414048
-  },
-  "model": "claude-fable-5[1m]"
+  }
 }

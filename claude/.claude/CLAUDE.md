@@ -8,3 +8,7 @@ It's possible to over-engineer when necessary to achieve high cohesion, low coup
 leveraging design patterns, such as strategy and visitor (frequent in this codebase), and best practices.
 
 When using the `cd` command (and *only* `cd`, not `npx`, `git`, or others), make sure to explicitly refer to `builtin cd` to avoid conflicts.
+
+**NEVER**, EVER, commit code on your own without my approval. In most cases, I'll handle the commits myself. When you are asked to commit, don't co-author anything.
+
+When you are unsure about a change, ask me first. I will provide guidance and help you, the agent, make the right decision.

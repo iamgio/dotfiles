@@ -135,6 +135,9 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh --cmd cd)"
 export _ZO_DOCTOR=0
 
+# gpg
+export GPG_TTY=$(tty)
+
 # Misc aliases
 
 alias cat="bat"
