@@ -165,7 +165,7 @@
     ]
   },
   "enabledPlugins": {
-    "superpowers@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
   },
   "tui": "default",
   "agentPushNotifEnabled": true,
